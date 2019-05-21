@@ -1,0 +1,91 @@
+<html>
+<head>
+  <title>marketplace</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+</head>
+<body style="background: #333333">
+  <div class="content">
+    <div class="logo">
+      <img src="https://s3-us-west-1.amazonaws.com/rhovit-2.0/icon/MarketPlace-logo.png" alt="" />
+    </div>
+    <div class="title">
+      <h3 class="form-title">Email Already Confirmed</h3>
+    </div>
+    <hr>
+    <div class="note note-info note-bordered" id="content">
+      <p>
+        Your email id has been confirmed. Please continue to
+        <a id="linkURL" href="" target="_blank">Sign In</a>, using your email address and your account's password.
+      </p>
+    </div>
+    <div style='color:#646464;font-size:14px;text-align: center'>2019 &copy; marketplace.</div>
+  </div>
+  <p style="display:none;" id="link">{{link}}</p>
+</body>
+</html>
+<style>
+  .content {
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 2%;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: -13px;
+    text-align: center;
+    color: #F05D4D;
+  }
+
+  #content {
+    word-spacing: 2px;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    text-decoration: none;
+  }
+
+  .note {
+    margin: 0 0 20px 0;
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #eee;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    -o-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .note p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .note p:last-child {
+    margin-bottom: 0;
+  }
+
+  .note.note-info {
+    background-color: #ffffff;
+    border-color: #F05D4D;
+    color: #010407;
+  }
+
+  .note.note-info.note-bordered {
+    background-color: #ffffff;
+    border-color: #F05D4D;
+  }
+</style>
+<script>
+  let loginLink;
+  let forgetLink;
+  var link = document.getElementById('link').innerHTML;
+  linkURL = link + '/login'
+  document.getElementById("linkURL").href = linkURL;
+</script>

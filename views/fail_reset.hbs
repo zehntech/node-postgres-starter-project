@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>marketplace</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <style>
+        @font-face {
+            font-family: 'Rajdhani';
+            src: url('./assets/fonts/rajdhani.medium.ttf');
+        }
+
+        @font-face {
+            font-family: 'Rajdhani1';
+            src: url('./assets/fonts/rajdhani.semibold.ttf');
+        }
+
+        #email-code {
+            color: white;
+            font-size: 320%;
+        }
+
+        .tag-line {
+            font-size: 18px !important;
+            color: #fff !important;
+        }
+
+        .theme-color {
+            color: #FF732E !important;
+        }
+
+        #logo-email-code {
+            margin-bottom: 2vh;
+            width: 60%;
+            height: 100px;
+            margin-top: 8vh;
+        }
+    </style>
+</head>
+
+<body style="background: #333333">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col"></div>
+            <div class="col-9 col-md-6">
+                <div id="email-code" class="text-center">
+                    <a [routerLink]="['']">
+                        <img src="https://s3-us-west-1.amazonaws.com/rhovit-2.0/icon/MarketPlace-logo.png" class="mx-auto d-block img-fluid" id="logo-email-code">
+                    </a>
+                    <div class="mb-4">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pr-0">
+                            <h3 class="mb-4">Password Reset Fail</h3>
+                            <p>{{err}}</p>
+                            <p class="tag-line"> Try to reset Again
+                                <a class="theme-color" id="linkURL" href="">Reset Again</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    </div>
+    {{!-- Hidden Tags --}}
+    <p style="display:none;" id="link">{{link}}</p>
+</body>
+
+</html>
+<script>
+    let forgetLink;
+    var link = document.getElementById('link').innerHTML;
+    forgetLink = link + '/forgot-password'
+    document.getElementById("linkURL").href = forgetLink;
+</script>
